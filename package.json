@@ -4,7 +4,8 @@
   "description": "A program that optimises the boot of Minecraft Dungeons by removing the unnecessary loading videos.",
   "main": "distrib/main.js",
   "scripts": {
-    "test": "node ."
+    "remove-loading-videos": "node .",
+    "revert-changes": "node distrib/scripts/revert-changes.js"
   },
   "keywords": [
     "minecraft",
