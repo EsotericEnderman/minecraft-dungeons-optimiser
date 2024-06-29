@@ -11,7 +11,7 @@ export function removeLoadingVideos() {
         const split = fullFilePath.split(".");
         split[1] = archivedVideoEnding;
 
-        let archivedVideoFilePath = split.join(".")
+        let archivedVideoFilePath = split.join("")
         archivedVideoFilePath += ".mp4";
 
         console.log("Removing video " + fullFilePath + " and archiving it at " + archivedVideoFilePath + ".");
