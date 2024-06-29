@@ -1,0 +1,18 @@
+{
+  "name": "minecraft-dungeons-optimiser",
+  "version": "1.0.0",
+  "description": "A program that optimises the boot of Minecraft Dungeons by removing the unnecessary loading videos.",
+  "main": "distrib/main.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "keywords": [
+    "minecraft",
+    "dungeons",
+    "optimise",
+    "loading",
+    "videos"
+  ],
+  "author": "Slqmy",
+  "license": "ISC"
+}
