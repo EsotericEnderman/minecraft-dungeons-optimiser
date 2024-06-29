@@ -1,5 +1,5 @@
-import { archivedVideoEnding, blankSplashContent, moviesFolder, splashesToRemove } from "../constants.js";
-import { readFileSync, rmSync, writeFileSync } from "fs";
+import { archivedVideoEnding, blankSplashContent, moviesFolder, splashesToRemove } from "../constants";
+import { existsSync, readFileSync, writeFileSync } from "fs";
 
 export function removeLoadingVideos() {
     for (const loadingVideo of splashesToRemove) {
@@ -22,8 +22,6 @@ export function removeLoadingVideos() {
         console.log("Removing video " + fullFilePath + " and archiving it at " + archivedVideoFilePath + ".");
 
         writeFileSync(archivedVideoFilePath, content);
-
-        rmSync(fullFilePath);
         writeFileSync(fullFilePath, blankSplashContent);
     }
 }
