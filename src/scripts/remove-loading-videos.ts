@@ -14,6 +14,11 @@ export function removeLoadingVideos() {
         let archivedVideoFilePath = split.join("")
         archivedVideoFilePath += ".mp4";
 
+        if (existsSync(archivedVideoFilePath)) {
+            console.log("Archive for video " + fullFilePath + " already exists, skipping.")
+            continue;
+        }
+
         console.log("Removing video " + fullFilePath + " and archiving it at " + archivedVideoFilePath + ".");
 
         writeFileSync(archivedVideoFilePath, content);
