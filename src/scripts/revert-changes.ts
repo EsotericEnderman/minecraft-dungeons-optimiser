@@ -1,5 +1,5 @@
 import { readFileSync, rmSync, writeFileSync } from "fs";
-import { archivedVideoEnding, blankSplashContent, moviesFolder, splashesToRemove } from "../constants";
+import { archivedVideoEnding, moviesFolder, splashesToRemove } from "../constants";
 
 export function revertChanges() {
     for (const loadingVideo of splashesToRemove) {
