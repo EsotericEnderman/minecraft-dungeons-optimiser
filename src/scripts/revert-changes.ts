@@ -5,7 +5,6 @@ export function revertChanges() {
     for (const loadingVideo of splashesToRemove) {
         const fullFilePath = moviesFolder + "/" + loadingVideo;
 
-        // Save content to new file, in case the user wants to re-add the loading videos
         const split = fullFilePath.split(".");
         split[1] = archivedVideoEnding;
 
