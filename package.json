@@ -17,7 +17,8 @@
   "author": "Slqmy",
   "license": "ISC",
   "dependencies": {
-    "fs": "^0.0.1-security"
+    "fs": "^0.0.1-security",
+    "minecraft-dungeons-optimiser": "file:"
   },
   "devDependencies": {
     "@types/node": "^20.14.9",
