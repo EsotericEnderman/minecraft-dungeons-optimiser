@@ -5,10 +5,6 @@ import { getArchivedVideoFilePath } from "../functions/get-archived-video-file-p
 export function removeLoadingVideos() {
     for (const loadingVideo of splashesToRemove) {
         const fullFilePath = moviesFolderPath + fileSeparator + loadingVideo;
-
-        const content = readFileSync(fullFilePath);
-
-        // Save content to new file, in case the user wants to re-add the loading videos
         const archivedVideoFilePath = getArchivedVideoFilePath(fullFilePath);
 
         if (existsSync(archivedVideoFilePath)) {
@@ -18,7 +14,10 @@ export function removeLoadingVideos() {
 
         console.log("Removing video " + fullFilePath + " and archiving it at " + archivedVideoFilePath + ".");
 
+        // Save content to new file, in case the user wants to re-add the loading videos
+        const content = readFileSync(fullFilePath);
         writeFileSync(archivedVideoFilePath, content);
+
         writeFileSync(fullFilePath, blankSplashContent);
     }
 }
