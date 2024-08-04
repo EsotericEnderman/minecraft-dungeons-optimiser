@@ -1,10 +1,13 @@
 import { readFileSync } from "fs";
 
-export const moviesFolder = "C:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Movies";
+export const driveLetter = "C";
+export const drivePathSeparator = ":";
+export const fileSeparator = "/";
+
+export const moviesFolderPath = driveLetter + drivePathSeparator + fileSeparator + "XboxGames" + fileSeparator + "Minecraft Dungeons" + fileSeparator + "Content" + fileSeparator + "Dungeons" + fileSeparator + "Content" + fileSeparator + "Movies";
 
 export const blankSplashFileName = "blank_splash720.mp4";
-
-export const blankSplashContent = readFileSync(moviesFolder + "/" + blankSplashFileName);
+export const blankSplashContent = readFileSync(moviesFolderPath + fileSeparator + blankSplashFileName);
 
 export const splashesToRemove = [
     "double11_splash720.mp4",
@@ -19,4 +22,4 @@ export const splashesToRemove = [
     "unreal_splash1080.mp4"
 ]
 
-export const archivedVideoEnding = "-archived";
+export const archivedVideoSuffix = "-archived";

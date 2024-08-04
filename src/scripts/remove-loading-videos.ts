@@ -1,15 +1,15 @@
-import { archivedVideoEnding, blankSplashContent, moviesFolder, splashesToRemove } from "../constants";
+import { archivedVideoSuffix, blankSplashContent, fileSeparator, moviesFolderPath, splashesToRemove } from "../constants";
 import { existsSync, readFileSync, writeFileSync } from "fs";
 
 export function removeLoadingVideos() {
     for (const loadingVideo of splashesToRemove) {
-        const fullFilePath = moviesFolder + "/" + loadingVideo;
+        const fullFilePath = moviesFolderPath + fileSeparator + loadingVideo;
 
         const content = readFileSync(fullFilePath);
 
         // Save content to new file, in case the user wants to re-add the loading videos
         const split = fullFilePath.split(".");
-        split[1] = archivedVideoEnding;
+        split[1] = archivedVideoSuffix;
 
         let archivedVideoFilePath = split.join("")
         archivedVideoFilePath += ".mp4";
