@@ -11,7 +11,7 @@ export function removeLoadingVideos() {
         const split = fullFilePath.split(".");
         split[1] = archivedVideoSuffix;
 
-        let archivedVideoFilePath = split.join("")
+        let archivedVideoFilePath = split.join("");
         archivedVideoFilePath += ".mp4";
 
         if (existsSync(archivedVideoFilePath)) {
