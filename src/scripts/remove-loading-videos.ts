@@ -1,4 +1,4 @@
-import { archivedVideoSuffix, blankSplashContent, fileSeparator, moviesFolderPath, splashesToRemove } from "../constants";
+import { archivedVideoSuffix, blankSplashContent, fileExtensionSeparator, fileSeparator, moviesFolderPath, splashesToRemove } from "../constants";
 import { existsSync, readFileSync, writeFileSync } from "fs";
 
 export function removeLoadingVideos() {
@@ -8,11 +8,13 @@ export function removeLoadingVideos() {
         const content = readFileSync(fullFilePath);
 
         // Save content to new file, in case the user wants to re-add the loading videos
-        const split = fullFilePath.split(".");
+        const split = fullFilePath.split(fileExtensionSeparator);
+
+        const fileEnding = split[1];
         split[1] = archivedVideoSuffix;
 
         let archivedVideoFilePath = split.join("");
-        archivedVideoFilePath += ".mp4";
+        archivedVideoFilePath += fileExtensionSeparator + fileEnding;
 
         if (existsSync(archivedVideoFilePath)) {
             console.log("Archive for video " + fullFilePath + " already exists, skipping.")

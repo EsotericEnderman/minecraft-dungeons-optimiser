@@ -3,6 +3,7 @@ import { readFileSync } from "fs";
 export const driveLetter = "C";
 export const drivePathSeparator = ":";
 export const fileSeparator = "/";
+export const fileExtensionSeparator = ".";
 
 export const moviesFolderPath = driveLetter + drivePathSeparator + fileSeparator + "XboxGames" + fileSeparator + "Minecraft Dungeons" + fileSeparator + "Content" + fileSeparator + "Dungeons" + fileSeparator + "Content" + fileSeparator + "Movies";
 
