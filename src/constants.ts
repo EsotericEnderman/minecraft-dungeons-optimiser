@@ -21,6 +21,6 @@ export const splashesToRemove = [
     "splash_intro_1080.mp4",
     "unreal_splash720.mp4",
     "unreal_splash1080.mp4"
-]
+];
 
 export const archivedVideoSuffix = "-archived";
