@@ -1,15 +1,12 @@
 import { readFileSync, rmSync, writeFileSync } from "fs";
-import { archivedVideoSuffix, moviesFolderPath, splashesToRemove } from "../constants";
+import { archivedVideoSuffix, fileExtensionSeparator, moviesFolderPath, splashesToRemove } from "../constants";
 
 export function revertChanges() {
     for (const loadingVideo of splashesToRemove) {
         const fullFilePath = moviesFolderPath + "/" + loadingVideo;
 
-        const split = fullFilePath.split(".");
-        split[1] = archivedVideoSuffix;
-
-        let archivedVideoFilePath = split.join("")
-        archivedVideoFilePath += ".mp4";
+        const fileExtensionSeparatorIndex = fullFilePath.lastIndexOf(fileExtensionSeparator);
+        const archivedVideoFilePath = fullFilePath.substring(0, fileExtensionSeparatorIndex) + archivedVideoSuffix + fileExtensionSeparator + fullFilePath.substring(fileExtensionSeparatorIndex + 1);
 
         let content: Buffer;
 
