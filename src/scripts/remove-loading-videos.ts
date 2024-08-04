@@ -9,10 +9,8 @@ export function removeLoadingVideos() {
 
         // Save content to new file, in case the user wants to re-add the loading videos
         const split = fullFilePath.split(".");
-        split[1] = archivedVideoEnding;
-
+        split.splice(1, 0, archivedVideoSuffix);
         let archivedVideoFilePath = split.join("")
-        archivedVideoFilePath += ".mp4";
 
         if (existsSync(archivedVideoFilePath)) {
             console.log("Archive for video " + fullFilePath + " already exists, skipping.")
