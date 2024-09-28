@@ -16,10 +16,6 @@
   ],
   "author": "Esoteric Enderman",
   "license": "MIT",
-  "dependencies": {
-    "fs": "^0.0.1-security",
-    "minecraft-dungeons-optimiser": "file:"
-  },
   "devDependencies": {
     "@types/node": "^20.14.9",
     "typescript": "^5.5.2"
