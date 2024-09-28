@@ -4,9 +4,9 @@
   "description": "A simple script to quicken the boot time of Minecraft Dungeons by removing the unneeded loading videos.",
   "main": "dist/main.js",
   "scripts": {
-    "install": "npm i",
+    "install-packages": "npm i",
     "compile": "npx tsc",
-    "build": "npm run install && npm run compile",
+    "build": "npm run install-packages && npm run compile",
     "remove-loading-videos": "npm run build && node .",
     "revert-changes": "npm run build && node dist/scripts/revert-changes.js"
   },
