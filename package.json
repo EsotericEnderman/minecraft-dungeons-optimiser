@@ -1,14 +1,10 @@
 {
   "name": "minecraft-dungeons-optimiser",
-  "version": "1.0.0",
   "description": "A simple script to quicken the boot time of Minecraft Dungeons by removing the unneeded loading videos.",
-  "main": "dist/main.js",
-  "scripts": {
-    "installPackages": "npm i",
-    "compile": "npx tsc",
-    "build": "npm run installPackages && npm run compile",
-    "remove-loading-videos": "npm run build && node .",
-    "revert-changes": "npm run build && node dist/scripts/revert-changes.js"
+  "author": {
+    "name": "Esoteric Enderman",
+    "email": "90862990+EsotericEnderman@users.noreply.github.com",
+    "url": "https://github.com/EsotericEnderman"
   },
   "keywords": [
     "minecraft",
@@ -17,12 +13,16 @@
     "loading",
     "videos"
   ],
-  "author": {
-    "name": "Esoteric Enderman",
-    "email": "90862990+EsotericEnderman@users.noreply.github.com",
-    "url": "https://github.com/EsotericEnderman"
-  },
   "license": "MIT",
+  "version": "1.0.0",
+  "main": "dist/main.js",
+  "scripts": {
+    "installPackages": "npm i",
+    "compile": "npx tsc",
+    "build": "npm run installPackages && npm run compile",
+    "remove-loading-videos": "npm run build && node .",
+    "revert-changes": "npm run build && node dist/scripts/revert-changes.js"
+  },
   "devDependencies": {
     "@types/node": "^20.14.9",
     "typescript": "^5.5.2"
