@@ -17,7 +17,11 @@
     "loading",
     "videos"
   ],
-  "author": "Esoteric Enderman",
+  "author": {
+    "name": "Esoteric Enderman",
+    "email": "90862990+EsotericEnderman@users.noreply.github.com",
+    "url": "https://github.com/EsotericEnderman"
+  },
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.14.9",
